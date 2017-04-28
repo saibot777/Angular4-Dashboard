@@ -1,0 +1,6 @@
+
+<fw-panel *ngFor="let card of cards; let i=index">
+  <div class="projected-title">Card</div>
+  <app-card-panel [card]="card" [index]="i+1">
+  </app-card-panel>
+</fw-panel>

@@ -1,0 +1,13 @@
+:host {
+    background-color: green;
+    min-height: 26px;
+  color: #fff;
+}
+div {
+  padding: 10px;
+}
+
+a {
+  color: aquamarine;
+  font-style: italic;
+}

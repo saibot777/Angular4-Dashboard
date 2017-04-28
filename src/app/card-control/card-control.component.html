@@ -1,0 +1,42 @@
+<h3>Card Maintenance</h3>
+<button class="btn btn-primary" (click)="createCard()">Add New Card</button>
+<table>
+  <thead>
+  <tr>
+    <th style="width: 25px">Id</th>
+    <th style="width: 200px">Card</th>
+    <th style="width: 70px">EPI Index</th>
+    <th style="min-width: 100px"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of cards">
+    <td>{{ row.id }}</td>
+    <td>{{ row.name }}</td>
+    <td>{{ row.epiIndex }}</td>
+    <td *ngIf="row.id != deleteId">
+      <button class="btn btn-sm btn-primary"
+        (click)="showCardDetail(row.id)">
+          Details
+      </button>
+      <button class="btn btn-sm btn-warning"
+        (click)="editCard(row.id)">
+          Edit
+      </button>
+      <button class="btn btn-sm btn-danger"
+        (click)="deleteCardQuestion(row.id)">
+          Delete
+      </button>
+    </td>
+    <td *ngIf="row.id === deleteId && !isDeleting">
+      Delete this card?
+      <button class="btn btn-sm" (click)="cancelDelete()">Cancel</button>
+      <button class="btn btn-sm btn-danger" (click)="deleteCard(row.id)">Delete</button>
+      <p *ngIf="deleteError">{{ deleteError }}</p>
+    </td>
+    <td *ngIf="row.id === deleteId && isDeleting">
+      Deleting...
+    </td>
+  </tr>
+  </tbody>
+</table>

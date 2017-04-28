@@ -1,0 +1,11 @@
+<h3>Card</h3>
+
+<fw-dynamic-form
+  [vm]="card"
+  [vmDefinition]="cardDefinition"
+  [operation]="operation"
+  [errorMessage]="errorMessage"
+  (update)="updateCard($event)"
+  (create)="createCard($event)"
+>
+</fw-dynamic-form>
