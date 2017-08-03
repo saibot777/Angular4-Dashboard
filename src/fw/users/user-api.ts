@@ -1,6 +1,4 @@
-import { Observable } from 'rxjs/Observable';
-import {RequestOptions, Headers, Response, Http} from "@angular/http";
-import {User} from "../../backend/_models/user";
+import {Http} from "@angular/http";
 
 export abstract class UserApi {
 

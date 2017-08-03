@@ -1,5 +1,5 @@
-import { Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import { ActivatedRoute, Params, Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router';
 
 import { AppDataService } from '../services/app-data.service';
 import { Card } from '../view-models/card';
@@ -56,10 +56,10 @@ export class CardDetailComponent implements OnInit {
 
     if (this.operation === 'create') {
       this.card = { id: 0, name: "", epiIndex: null };
-    }
-    else
-      this.dataService.getCard(this.route.snapshot.params['id'])
-        .subscribe((card: Card) => this.card = card);
+    } else {
+        this.dataService.getCard(this.route.snapshot.params['id'])
+          .subscribe((card: Card) => this.card = card);
+      }
   }
 
   updateCard(card: Card) {

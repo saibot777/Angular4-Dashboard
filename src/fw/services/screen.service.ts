@@ -16,10 +16,9 @@ export class ScreenService {
             this.screenWidth = window.innerWidth;
             this.screenHeight = window.innerHeight;
             window.addEventListener('resize', (event) => this.onResize(event));
-        }
-        catch (e) {
+        } catch (e) {
             // we're going with default screen dimensions
-        }
+          }
     }
 
     isLarge() : boolean {

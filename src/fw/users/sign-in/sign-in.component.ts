@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
+import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 import {UserService} from "../../../app/services/user.service";
 import {AlertService} from "../../../backend/_services/alert.service";
 
@@ -17,15 +17,9 @@ export class SignInComponent {
   model: any = {};
 
   constructor(
-    private route: ActivatedRoute,
     private router: Router,
     private authenticationService: UserService,
     private alertService: AlertService) { }
-
-  ngOnInit() {
-    // // reset login status
-    // this.authenticationService.logout();
-  }
 
   login() {
     this.loading = true;

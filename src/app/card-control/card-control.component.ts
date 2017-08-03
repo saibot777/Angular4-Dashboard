@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppDataService } from '../services/app-data.service';
@@ -37,7 +37,7 @@ export class CardControlComponent {
       );
   }
 
-  deleteCardQuestion(id:number) {
+  deleteCardQuestion(id: number) {
     this.deleteError = null;
     this.deleteId = id;
   }

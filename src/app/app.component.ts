@@ -14,7 +14,7 @@ export class AppComponent {
   constructor (private frameworkConfigService: FrameworkConfigService,
                private menuService: MenuService) {
 
-    let config:FrameworkConfigSettings = {
+    const config: FrameworkConfigSettings = {
       showUserControls: true
     };
 

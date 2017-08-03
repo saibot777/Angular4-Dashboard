@@ -36,7 +36,7 @@ export class CardListComponent implements OnInit {
   }
 
   updateList() {
-    this.cards = this.count>0?this.allCards.slice(0, this.count): this.allCards;
+    this.cards = this.count > 0 ? this.allCards.slice(0, this.count) : this.allCards;
   }
 }
 

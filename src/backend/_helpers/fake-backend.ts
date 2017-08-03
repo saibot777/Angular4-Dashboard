@@ -146,11 +146,15 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
     });
 
     return new Http(backend, options);
-};
+}
 
 export let fakeBackendProvider = {
     // use fake backend in place of Http service for backend-less development
     provide: Http,
     useFactory: fakeBackendFactory,
-    deps: [MockBackend, BaseRequestOptions, XHRBackend]
+    deps: [
+      MockBackend,
+      BaseRequestOptions,
+      XHRBackend
+    ]
 };
