@@ -7,7 +7,7 @@ import {Http, Response} from "@angular/http";
 @Injectable()
 export class UserService  {
 
-  isAuthenticated = true;
+  isAuthenticated = false;
 
   constructor(private router: Router, public http: Http) { }
 
